@@ -21,10 +21,12 @@ next tick (one run of the application of all the rules), represented in the same
 
 -------------------------------------------------------------------------------------------
 Input A: (Block pattern)
+
      X X
      X X
 
 Output A:
+
      X X
      X X
 
