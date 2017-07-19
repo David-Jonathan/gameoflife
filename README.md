@@ -1,4 +1,18 @@
+
+=======================================================
+GameOfLife program usage:
+
+Input-1: numberOfRows(non-zero positive integer)
+Input-2: numberOfColumns(non-zero positive integer)
+Input-3(optional): numberOfGenerations
+
+Example : java -jar application.jar 2 3 4
+
+=======================================================
+
 INTRODUCTION TO THE PROBLEM 'GAME OF LIFE'
+
+=======================================================
 
 The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in 
 one of two possible states, live or dead. Every cell interacts with its eight neighbours, which are the cells that are 
