@@ -39,13 +39,15 @@ public enum GameOfLifeEnum {
     ENDOFPROGRAM_MARKER("=========================\nEnd of GameOfLife program\n========================="),
     
     RECOMMENDED_USAGE_MESSAGE("Please pass the recommended input parameters."),
-	RECOMMENDED_USAGE("Inputs to GameOfLife program : \n Input-1: numberOfRows(positive integer) \n "
-			+ "Input-2: numberOfColumns(positive integer) \n "
-			+ "Input-3(optional): numberOfGenerations \n" 
-			+ "Example: program.jar 2 3 4"),
+	RECOMMENDED_USAGE("Inputs to GameOfLife program : \n\nInput-1: numberOfRows(non-zero positive integer) \n"
+			+ "Input-2: numberOfColumns(non-zero positive integer) \n"
+			+ "Input-3(optional): numberOfGenerations \n\n" 
+			+ "Example: \"java -jar application.jar 2 3 4\" \n"),
 	
-	NEGATIVE_INPUT("The given rows/columns range has negative values."),
-	NEGATIVE_INPUT_GENERATIONS("The third input has negative values.");
+	NEGATIVE_INPUT("The input value for the rows/columns has negative value(s)."),
+	NEGATIVE_INPUT_GENERATIONS("The third input has negative values."),
+	NAN_INPUT("One of the given inputs is not a number."),
+	ZERO_VALUE_INPUTS("The input value for the rows/columns range is 0.");
 
     private String textValue;
 	private int intValue;

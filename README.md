@@ -1,12 +1,16 @@
 
 =======================================================
+
 GameOfLife program usage:
 
 Input-1: numberOfRows(non-zero positive integer)
+
 Input-2: numberOfColumns(non-zero positive integer)
+
 Input-3(optional): numberOfGenerations
 
 Example : java -jar application.jar 2 3 4
+
 
 =======================================================
 

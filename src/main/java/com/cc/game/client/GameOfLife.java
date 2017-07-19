@@ -5,6 +5,7 @@ import org.apache.commons.logging.LogFactory;
 
 import com.cc.game.main.LivingSpaceImpl;
 import com.cc.game.util.GameOfLifeEnum;
+import com.cc.game.util.InvalidInputException;
 
 /**
  * @author Silas
@@ -18,14 +19,27 @@ public class GameOfLife {
 	public static void main(String[] args) {
 		
 		try {
-			int rows = Integer.parseInt(args[0]);
-			int columns = Integer.parseInt(args[1]);
-			int numberOfGenerations = (args != null && args.length > 2) 
-					? Integer.parseInt(args[2]) : 1; 
-			int i = 0;
 			
+			int rows = 0;
+			int columns = 0;
+			int numberOfGenerations = 0;
+			
+			try {
+				rows = Integer.parseInt(args[0]);
+				columns = Integer.parseInt(args[1]);
+				numberOfGenerations = (args != null && args.length > 2) 
+						? Integer.parseInt(args[2]) : 1; 
+			} catch (NumberFormatException nfe) {
+				throw new InvalidInputException(GameOfLifeEnum.NAN_INPUT.getTextValue());
+			} catch (ArrayIndexOutOfBoundsException aiob) {
+				throw new InvalidInputException(GameOfLifeEnum.RECOMMENDED_USAGE_MESSAGE.getTextValue());
+			} 
+			int i = 0;
+			if(rows == 0 || columns == 0) {
+				throw new InvalidInputException(GameOfLifeEnum.ZERO_VALUE_INPUTS.getTextValue());
+			}
 			if(numberOfGenerations < 0) {
-				throw new NegativeArraySizeException(GameOfLifeEnum.NEGATIVE_INPUT_GENERATIONS.getTextValue());
+				throw new InvalidInputException(GameOfLifeEnum.NEGATIVE_INPUT_GENERATIONS.getTextValue());
 			}
 			LivingSpaceImpl gameOfLife = new LivingSpaceImpl(rows,columns);
 			
@@ -43,16 +57,10 @@ public class GameOfLife {
 			}		
 			logger.info(GameOfLifeEnum.ENDOFPROGRAM_MARKER.getTextValue());
 			
-		} catch (ArrayIndexOutOfBoundsException aiob) {
-			logger.error(GameOfLifeEnum.RECOMMENDED_USAGE_MESSAGE.getTextValue() + "\n\n"
+		} catch (InvalidInputException invalidException) {
+			logger.error(invalidException.getMessage() + "\n\n"
 					+ GameOfLifeEnum.RECOMMENDED_USAGE.getTextValue());
-		} /*catch (NegativeArraySizeException nase) {
-			logger.error(GameOfLifeEnum.NEGATIVE_INPUT.getTextValue() + "\n\n"
-					+ GameOfLifeEnum.RECOMMENDED_USAGE.getTextValue());
-		} catch (Exception e) {
-			logger.error(GameOfLifeEnum.NEGATIVE_INPUT_GENERATIONS.getTextValue() + "\n\n"
-					+ GameOfLifeEnum.RECOMMENDED_USAGE.getTextValue());
-		}*/
+		} 
 	}
 	
 }

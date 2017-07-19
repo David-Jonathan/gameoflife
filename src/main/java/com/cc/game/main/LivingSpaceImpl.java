@@ -6,6 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.cc.game.util.GameOfLifeEnum;
+import com.cc.game.util.InvalidInputException;
 
 /**
  * @author Silas
@@ -39,15 +40,13 @@ public class LivingSpaceImpl implements LivingSpace {
 	 * @param row - number of rows in the livingspace matrix
 	 * @param columns - number of columns in the livingspace matrix
 	 */
-    public LivingSpaceImpl(int rows, int columns) {
+    public LivingSpaceImpl(int rows, int columns) throws InvalidInputException {
 		this.rows = rows;
 		this.columns = columns;
 		try {
 			setLivingSpace(newLivingSpace());
 		} catch(NegativeArraySizeException negativeArraySizeException) {
-			logger.error(GameOfLifeEnum.NEGATIVE_INPUT.getTextValue()
-					+ negativeArraySizeException.getMessage());
-			throw negativeArraySizeException;
+			throw new InvalidInputException(GameOfLifeEnum.NEGATIVE_INPUT.getTextValue());
 		}
 	}
 
