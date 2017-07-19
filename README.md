@@ -20,8 +20,7 @@ The below inputs provide the provide pattern or initial cells in the universe. T
 next tick (one run of the application of all the rules), represented in the same format.
 
 -------------------------------------------------------------------------------------------
-Input A:
-(Block pattern)
+Input A: (Block pattern)
      X X
      X X
 
@@ -30,20 +29,20 @@ Output A:
      X X
 
 -------------------------------------------------------------------------------------------
-Input B
-(Boat pattern)
-X X -
-X - X
-- X -
+Input B (Boat pattern)
+
+     X X -
+     X - X
+     - X -
 
 Output B
-X X -
-X - X
-- X -
+
+     X X -
+     X - X
+     - X -
 
 -------------------------------------------------------------------------------------------
-Input C
-(Blinker pattern)
+Input C (Blinker pattern)
      - X -
      - X -
      - X -
@@ -54,14 +53,15 @@ Output C
      - - -
 
 -------------------------------------------------------------------------------------------
-Input D
-(Toad pattern)
+Input D (Toad pattern)
+        
         - - - -
         - X X X
         X X X -
         - - - -
 
 Output D
+
         - - X -
         X - - X
         X - - X
