@@ -47,5 +47,11 @@ public class GameOfLifeTest {
 		String[] args = {"4","4d"};
 		GameOfLife.main(args);
     }
-    
+
+	@Test(expected = NegativeArraySizeException.class)
+    public final void testMainMethodWhenNegativeValueIsPassedAsOneOrBothArguments() {
+		String[] args = {"4","-4"};
+		GameOfLife.main(args);
+    }
+
 }
