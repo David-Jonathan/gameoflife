@@ -6,7 +6,7 @@
         "context": "Gameoflife_Build",
         "options": {
           "build_tag": "proj-was99",
-          "build_env": "env-prod1",
+          "build_env": "env-prod99",
           "cuke_tags" : [
             "@proj-was99","@proj-was66"
           ]
