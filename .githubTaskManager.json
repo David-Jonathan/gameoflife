@@ -2,33 +2,12 @@
   "pull_request": {
     "tasks": [
       {
-        "executor": "jenkins",
-        "context": "functional",
-        "options": {
-          "tags": [
-            "@smoke"
-          ],
-          "browsers": [
-            "chrome"
-          ]
-        }
-      },
-      {
-        "executor": "teamcity",
+        "executor": "TeamCity",
         "context": "Gameoflife_Build",
         "options": {
-          "build_tag": "proj-was9",
+          "build_tag": "proj-was99",
           "cuke_tags" : [
-            "@proj-was9","@proj-was6"
-          ]
-        }
-      },
-      {
-        "executor": "travis",
-        "context": "integration",
-        "options": {
-          "tags": [
-            "@a11y"
+            "@proj-was99","@proj-was6"
           ]
         }
       }
