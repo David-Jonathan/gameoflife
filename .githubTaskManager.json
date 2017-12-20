@@ -2,7 +2,7 @@
   "pull_request": {
     "tasks": [
       {
-        "executor": "teamcity",
+        "executor": "TeamCity",
         "context": "Gameoflife_Build",
         "options": {
           "build_tag": "proj-was99",
