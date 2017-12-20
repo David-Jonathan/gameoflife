@@ -5,7 +5,7 @@
         "executor": "TeamCity",
         "context": "Gameoflife_Build",
         "options": {
-          "build_tag": "proj-was_from_pull_request",
+          "build_tag": "proj-was_from_PR",
           "build_env": "env-prod9",
           "cuke_tags" : [
             "@proj-was99","@proj-was66"
