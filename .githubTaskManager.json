@@ -7,7 +7,7 @@
         "options": {
           "build_tag": "proj-was99",
           "cuke_tags" : [
-            "@proj-was9","@proj-was6"
+            "@proj-was99","@proj-was6"
           ]
         }
       }
