@@ -17,7 +17,7 @@
         "executor": "teamcity",
         "context": "Gameoflife_Build",
         "options": {
-          "build_tag": "proj-was91",
+          "build_tag": "proj-was9",
           "cuke_tags" : [
             "@proj-was9","@proj-was6"
           ]
