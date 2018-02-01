@@ -3,15 +3,20 @@
     "tasks": [
       {
         "executor": "TeamCity",
-        "context": "Gameoflife_Build",
+        "context": "run e2e tests",
         "options": {
-          "build_tag": "proj-was_from_PReq",
-          "build_env": "env-prod9",
-          "cuke_tags" : [
-            "@proj-was99","@proj-was66"
-          ]
+          "jobName": "projectName_id",
+          "parameters": {
+            "build_tag" : "proj_wasX",
+            "ENVIRONMENT" : "env_dev",
+            "cuke_env" : "env_dev|staging|prod",
+            "cuke_tags" : [
+              "@proj_wasX",
+              "@proj_wasn"
+            ]
+          }
         }
       }
-    ]
+    ] 
   }
 }
