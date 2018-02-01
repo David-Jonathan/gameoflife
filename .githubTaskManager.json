@@ -8,12 +8,7 @@
           "jobName": "Gameoflife_Build",
           "parameters": {
             "build_tag" : "proj_wasX",
-            "ENVIRONMENT" : "env_dev",
-            "cuke_env" : "env_dev|staging|prod",
-            "cuke_tags" : [
-              "@proj_wasX",
-              "@proj_wasn"
-            ]
+            "ENVIRONMENT" : "env_dev"
           }
         }
       }
