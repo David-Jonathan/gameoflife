@@ -12,17 +12,6 @@
             "cuke_tags" : "test_tag"
           }
         }
-      },
-      {
-        "executor": "TeamCity",
-        "context": "run e2e tests",
-        "options": {
-          "jobName": "GameoflifeNotest_Build",
-          "parameters": {
-            "build_tag" : "proj_wasX",
-            "ENVIRONMENT" : "env_dev"
-          }
-        }
       }
     ] 
   }
