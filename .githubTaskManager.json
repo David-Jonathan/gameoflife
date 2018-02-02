@@ -9,7 +9,7 @@
           "parameters": {
             "build_tag" : "proj_wasX",
             "ENVIRONMENT" : "env_dev",
-            "cuke_tage" : "test_tag"
+            "cuke_tags" : "test_tag"
           }
         }
       }
